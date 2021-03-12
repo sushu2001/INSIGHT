@@ -4,24 +4,174 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css"> 
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <title>INSIGHT</title>
     </head>
     <body>
-        <div class="back">
-            <div class="form-box">
+             <div class="form-box">
                 <div class="button-box">
                     <div id="btn"></div>
-                    <button type="button" class="toggle">Log In</button>                   
-                    <button type="button" class="toggle">Register</button>
+                    <button type="button" class="toggle" onclick="login()">Log In</button>                   
+                    <button type="button" class="toggle" onclick="register()">Register</button>
                 </div>
-                <div class="socials">
-                    <img src="vendors/img/fb.png">
-                    <img src="vendors/img/insta.png">
-                    <img src="vendors/img/linkedin.png">
-                </div>
+                <form id="Login" class="inputid">
+                    <div class="form-control">
+                        <label>Enter Registration ID</label>
+                        <input type="text" class="input" placeholder="C2K12345678" required id="regID">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-c">
+                        <label>Enter Password</label>
+                        <input type="password" class="input" placeholder="Password" required id="pass1">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                        <input type="checkbox" class="check"><span>Remember Password</span>
+                        <button type="button" class="submit-bn">Log In</button> 
+
+                </form> 
+                <form id="Register" class="inputregid">
+                    <div class="form-control">
+                    
+                        <label>Enter Registration ID</label>
+                        <input type="text" class="input" placeholder="C2K12345678" required id="regID">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-c">
+                        <label>Enter Email ID</label>
+                        <input type="email" class="input" placeholder="insight@gmail.com" required id="emailID">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-con">
+                    
+                        <label>Enter Password</label>
+                        <input type="password" class="input" placeholder="Password" required id="pass1">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                        
+                    <div class="form-cont">
+
+                        <label>Confirm Password</label>
+                        <input type="password" class="input" placeholder="Retype Password" required id="pass2">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    
+                    <button type="button" class="submit-bn">Submit</button> 
+                
+                </form>
             </div>
-        </div>
+    
+        
+       <script>
+            var x= document.getElementById("Login");
+            var y= document.getElementById("Register");
+            var z= document.getElementById("btn");
+            
+            
+            
+            function register(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px";
+            }
+            
+            function login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0px";
+                
+            }
+        </script>
+        
+        
+        <script>
+            const Register = document.getElementById("Register");
+            const regID = document.getElementById("regID");
+            const emailID = document.getElementById("emailID");
+            const pass1 = document.getElementById("pass1");
+            const pass2 = document.getElementById("pass2");
+            
+            Register.addEventListener('submit' (e) =>{
+            
+                e.preventDefault();
+                
+                checkInputs();
+            })
+            
+            function checkInputs(){
+                //get the values from the inputs
+                const regvalue = regID.value.trim();
+                const emailvalue = emailID.value.trim();
+                const passvalue = pass1.value.trim();
+                const pass2value = pass2.value.trim();
+                
+                if(regvalue === ''){
+                   //show error
+                   //add error class
+                    setErrorFor(regID, 'ID cannot be blank');
+                }
+                else{
+                    //add success class
+                    setSuccessFor(regID);
+                }
+
+                if(regvalue === ''){
+                    //show error
+                    //add error class
+                }
+                else{
+                   //add success class
+                }
+
+                if(regvalue === ''){
+                    //show error
+                    //add error class
+                }
+                else{
+                    //add success class
+                }
+
+                if(regvalue === ''){
+                    //show error
+                    //add error class
+                }
+                else{
+                    //add success class
+                }
+            }     
+
+            function setErrorFor(input, message){
+                const form-control = input.parentElement;
+                const small = form-control.querySelector('small');
+
+                //add error message inside small
+                small.innerText = message;
+
+                //add error class
+                form-control.className = 'form-control error';
+            }
+
+            function setSuccessFor(input){
+                const form-control = input.parentElement;
+                form-control.className = 'form-control success';
+            }
+
+            
+            
+        </script>
                
     </body>
     

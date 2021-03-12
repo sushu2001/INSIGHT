@@ -1,57 +1,56 @@
-/*** BASIC STEPS***/
+/* BASIC STEPS***/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'sans-serif';
 }
 
-html {
-    background-color: #fff;
-    color: #555;
-    font-family: 'Lato','Arial','sans-serif';
-    font-size: 20px;
-    font-weight: 300;
-    text-rendering: optimizeLegibility;
+
+body {
+    background-color: #9b59b6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
     
 }
 
-.back {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/reg-bag.jpg);
-    background-position: center;
-    position: absolute;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    
-}
+
+/*******************FORMBOX**********************/
 
 .form-box{
     width: 380px;
-    height: 480px;
+    height: 500px;
     position: relative;
     padding: 5px;
     margin: 6% auto;
-    background: #fff;
-    
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+   
 }
 
 .button-box{
     width: 220px;
-    margin: 35px auto;
+    margin: 20px auto;
     position: relative;
-    border-radius: 3px;
-    box-shadow: 0 0 5px 5px #ebdede;
+    border-radius: 60px;
+    box-shadow: 0 0 20px 9px #ebdede;
 }
 
 .toggle{
     background: transparent;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 10px 29px;
     border: 0;
     outline: none;
     position: relative;
 }
+
 
 #btn{
     top: 0;
@@ -59,19 +58,169 @@ html {
     position: absolute;
     width: 110px;
     height: 100%;
-    background: linear-gradient(to right, #0000ff, #0000ff);
+    background: linear-gradient(to right, #0000ff, #00ffff);
     border-radius: 30px;
     transition: .5s;
     
 }
 
-.socials{
-    text-align: center;
-    margin: 30px auto;
+/*************INPUT FILLING*********************/
+
+
+.inputid{
+    top: 120px;
+    width: 280px;
+    position: absolute;
+    transition: .5s;
 }
 
-.socials img{
-    width: 30px;
-    margin: 0 12px;
+.inputregid{
+    top: 90px;
+    width: 280px;
+    position: absolute;
+    transition: .5s;
+}
+
+.input{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    margin-bottom: 8px;
+    background: transparent;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid #3c2b2b;
+}
+
+.form-control i{
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-c i{
+    position: absolute;
+    right: 10px;
+    top: 110px;
+    visibility: hidden;
+}
+
+.form-con i{
+    position: absolute;
+    right: 10px;
+    top: 200px;
+    visibility: hidden;
+}
+
+.form-cont i{
+    position: absolute;
+    right: 10px;
+    top: 290px;
+    visibility: hidden;
+}
+
+.form-control.success input{
+    border-color: #2ecc71;
+}
+
+
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+.form-c.success input{
+    border-color: #2ecc71;
+}
+
+.form-c.error input{
+    border-color: #e74c3c;
+}
+
+.form-control.success i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-c.success i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-c.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+}
+.form-c small{
+    visibility: hidden; 
+    position: absolute;
+}
+.form-con small{
+    visibility: hidden;
+    position: absolute;
+}
+.form-cont small{
+    visibility: hidden; 
+    position: absolute;
+}
+
+.form-c.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+/**************SUBMIT******************/
+.submit-bn{
+    padding: 10px 30px;
+    width: 60%;
     cursor: pointer;
+    background: linear-gradient(to right, #0000ff, #00ffff);
+    display: block;
+    margin: auto;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+
+}
+
+/***************CHECKBOX*******************/
+
+.check{
+    margin: 30px 10px 30px 0;
+    box-sizing: content-box;
+    
+}
+
+span{
+    bottom: 66px;
+    position: absolute;
+    font-size: 18px;
+    color: #885353;
+    
+}
+
+/****************DIVISIONS FOR LOGIN AND REGISTER**************/
+
+#Login{
+    left: 50px;
+    
+}
+
+#Register{
+    left: 450px;
 }
