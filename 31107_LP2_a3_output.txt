@@ -1,0 +1,21 @@
+ENter: 4
+Enter weights: 1
+Enter weights: 2
+Enter weights: 3
+Enter weights: 4
+Enter weights: 5
+Enter weights: 1
+Enter weights: 3
+Enter weights: 5
+Enter weights: 8
+Enter weights: 1
+Enter weights: 2
+Enter weights: 3
+Enter weights: 1
+Enter weights: 4
+Enter weights: 5
+Enter weights: 6
+Edge    Weight
+0 - 1    5
+0 - 2    8
+2 - 3    5
